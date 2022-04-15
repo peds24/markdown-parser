@@ -20,6 +20,11 @@ public class MarkdownParse {
                 System.out.println("Error, invalid input: missing \"()\"");
                 break;
             }
+            if (openBracket == -1 || closeBracket == -1) {
+                System.out.println("Error, invalid input: missing \"[]\"");
+                break;
+            }
+
             toReturn.add(markdown.substring(openParen + 1, closeParen));
             currentIndex = closeParen + 1;
         }
