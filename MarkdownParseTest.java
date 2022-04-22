@@ -25,4 +25,35 @@ public class MarkdownParseTest {
 
         assertEquals(expected, toReturn);
     }
+
+    @Test
+    public void justParenthTest() throws IOException {
+        Path fileName = Path.of("justParenth.md");
+        String content = Files.readString(fileName);
+        ArrayList<String> toReturn = MarkdownParse.getLinks(content);
+
+        ArrayList<String> expected = new ArrayList<>();
+        assertEquals(expected, toReturn);
+    }
+
+    @Test
+    public void emtpyFile() throws IOException {
+        Path fileName = Path.of("justParenth.md");
+        String content = Files.readString(fileName);
+        ArrayList<String> toReturn = MarkdownParse.getLinks(content);
+
+        ArrayList<String> expected = new ArrayList<>();
+        assertEquals(expected, toReturn);
+    }
+
+    @Test
+    public void noParenth() throws IOException {
+        Path fileName = Path.of("noParenth.md");
+        String content = Files.readString(fileName);
+        ArrayList<String> toReturn = MarkdownParse.getLinks(content);
+
+        ArrayList<String> expected = new ArrayList<>();
+        expected.add("https://www.netflix.com/");
+        assertEquals(expected, toReturn);
+    }
 }
