@@ -13,7 +13,6 @@ public class MarkdownParseTest {
         assertEquals(2, 1 + 1);
     }
 
-    @Test
     public void testFileTest() throws IOException {
         Path fileName = Path.of("test-file.md");
         String content = Files.readString(fileName);
@@ -26,7 +25,6 @@ public class MarkdownParseTest {
         assertEquals(expected, toReturn);
     }
 
-    @Test
     public void justParenthTest() throws IOException {
         Path fileName = Path.of("justParenth.md");
         String content = Files.readString(fileName);
@@ -36,7 +34,6 @@ public class MarkdownParseTest {
         assertEquals(expected, toReturn);
     }
 
-    @Test
     public void emtpyFile() throws IOException {
         Path fileName = Path.of("justParenth.md");
         String content = Files.readString(fileName);
@@ -46,7 +43,6 @@ public class MarkdownParseTest {
         assertEquals(expected, toReturn);
     }
 
-    @Test
     public void noParenth() throws IOException {
         Path fileName = Path.of("noParenth.md");
         String content = Files.readString(fileName);
@@ -58,8 +54,8 @@ public class MarkdownParseTest {
     }
 
     @Test
-    public void doublePar() throws IOException {
-        Path fileName = Path.of("doublePar.md");
+    public void spaceBetween() throws IOException {
+        Path fileName = Path.of("spaceBetween.md");
         String content = Files.readString(fileName);
         ArrayList<String> toReturn = MarkdownParse.getLinks(content);
 
