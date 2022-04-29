@@ -56,4 +56,14 @@ public class MarkdownParseTest {
         expected.add("https://www.netflix.com/");
         assertEquals(expected, toReturn);
     }
+
+    @Test
+    public void doublePar() throws IOException {
+        Path fileName = Path.of("doublePar.md");
+        String content = Files.readString(fileName);
+        ArrayList<String> toReturn = MarkdownParse.getLinks(content);
+
+        ArrayList<String> expected = new ArrayList<>();
+        assertEquals(expected, toReturn);
+    }
 }

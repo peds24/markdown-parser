@@ -16,21 +16,24 @@ public class MarkdownParse {
             int closeBracket = markdown.indexOf("]", openBracket);
             int openParen = markdown.indexOf("(", closeBracket);
             int closeParen = markdown.indexOf(")", openParen);
-            if (openParen == -1 || closeParen == -1) {
-                System.out.println("Error, invalid input: missing \"()\"");
-                break;
-            }
-            if (openBracket == -1 || closeBracket == -1) {
-                System.out.println("Error, invalid input: missing \"[]\"");
-                break;
-            }
-
-            // if (closeBracket + 1 != openParen) {
-            // System.out.println("Space in between the \"[] ()\"");
-            // System.out.println("Invalid input: linked file/link is not correctly
-            // formatted");
-            // break;
-            // }
+            /*
+             * if (openParen == -1 || closeParen == -1) {
+             * System.out.println("Error, invalid input: missing \"()\"");
+             * break;
+             * }
+             * 
+             * if (openBracket == -1 || closeBracket == -1) {
+             * System.out.println("Error, invalid input: missing \"[]\"");
+             * break;
+             * }
+             * 
+             * if (closeBracket + 1 != openParen) {
+             * System.out.println("Space in between the \"[] ()\"");
+             * System.out.
+             * println("Invalid input: linked file/link is not correctly formatted");
+             * break;
+             * }
+             */
 
             toReturn.add(markdown.substring(openParen + 1, closeParen));
             currentIndex = closeParen + 1;
@@ -44,6 +47,5 @@ public class MarkdownParse {
         String content = Files.readString(fileName);
         ArrayList<String> links = getLinks(content);
         System.out.println(links);
-        System.out.println("timer test");
     }
 }
