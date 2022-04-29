@@ -9,7 +9,7 @@ import java.nio.file.Path;
 public class MarkdownParseTest {
 
     public void failingTest() {
-        assertEquals(2, 1 + 3);
+        assertEquals(2, 1 + 5);
     }
 
     @Test
