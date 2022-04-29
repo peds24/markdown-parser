@@ -25,11 +25,12 @@ public class MarkdownParse {
                 break;
             }
 
-            if (closeBracket + 1 != openParen) {
-                System.out.println("Space in between the \"[] ()\"");
-                System.out.println("Invalid input: linked file/link is not correctly formatted");
-                break;
-            }
+            // if (closeBracket + 1 != openParen) {
+            // System.out.println("Space in between the \"[] ()\"");
+            // System.out.println("Invalid input: linked file/link is not correctly
+            // formatted");
+            // break;
+            // }
 
             toReturn.add(markdown.substring(openParen + 1, closeParen));
             currentIndex = closeParen + 1;
