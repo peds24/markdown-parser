@@ -8,8 +8,8 @@ import java.nio.file.Path;
 
 public class MarkdownParseTest {
 
-    public void addition() {
-        assertEquals(2, 1 + 1);
+    public void failingTest() {
+        assertEquals(2, 1 + 3);
     }
 
     @Test
