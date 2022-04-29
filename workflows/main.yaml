@@ -1,4 +1,4 @@
-name: jUnit Markdown (Github Actions)
+name: jUnit Markdown Github Actions
 on: [push]
 jobs:
   build:
