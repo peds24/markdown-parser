@@ -25,7 +25,6 @@ public class MarkdownParseTest {
         assertEquals(expected, toReturn);
     }
 
-    @Test
     public void justParenthTest() throws IOException {
         Path fileName = Path.of("justParenth.md");
         String content = Files.readString(fileName);
