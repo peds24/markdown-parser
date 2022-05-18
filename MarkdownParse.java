@@ -16,8 +16,8 @@ public class MarkdownParse {
             int closeBracket = markdown.indexOf("]", openBracket);
             int openParen = markdown.indexOf("(", closeBracket);
             int closeParen = markdown.indexOf(")", openParen);
+            // Fixes for first 6 tests
             /*
-             * Fixes for commented out Tests
              * if (openParen == -1 || closeParen == -1) {
              * System.out.println("Error, invalid input: missing \"()\"");
              * break;
@@ -35,6 +35,7 @@ public class MarkdownParse {
              * break;
              * }
              */
+            // Fixes for Lab 4
             toReturn.add(markdown.substring(openParen + 1, closeParen));
             currentIndex = closeParen + 1;
         }
