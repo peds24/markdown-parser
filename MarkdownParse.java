@@ -17,6 +17,7 @@ public class MarkdownParse {
             int openParen = markdown.indexOf("(", closeBracket);
             int closeParen = markdown.indexOf(")", openParen);
             /*
+             * Fixes for commented out Tests
              * if (openParen == -1 || closeParen == -1) {
              * System.out.println("Error, invalid input: missing \"()\"");
              * break;
@@ -27,13 +28,13 @@ public class MarkdownParse {
              * break;
              * }
              * 
+             * if (closeBracket + 1 != openParen) {
+             * System.out.println("Space in between the \"[] ()\"");
+             * System.out.
+             * println("Invalid input: linked file/link is not correctly formatted");
+             * break;
+             * }
              */
-
-            if (closeBracket + 1 != openParen) {
-                System.out.println("Space in between the \"[] ()\"");
-                System.out.println("Invalid input: linked file/link is not correctly formatted");
-                break;
-            }
             toReturn.add(markdown.substring(openParen + 1, closeParen));
             currentIndex = closeParen + 1;
         }

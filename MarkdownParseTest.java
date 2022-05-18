@@ -7,8 +7,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 public class MarkdownParseTest {
-
-    @Test
     public void failingTest() {
         assertEquals(2, 1 + 1);
     }
@@ -53,7 +51,6 @@ public class MarkdownParseTest {
         assertEquals(expected, toReturn);
     }
 
-    @Test
     public void spaceBetween() throws IOException {
         Path fileName = Path.of("spaceBetween.md");
         String content = Files.readString(fileName);
@@ -62,4 +59,6 @@ public class MarkdownParseTest {
         ArrayList<String> expected = new ArrayList<>();
         assertEquals(expected, toReturn);
     }
+    // Lab 4 Tests
+
 }
