@@ -62,33 +62,34 @@ public class MarkdownParseTest {
 
     // Lab 4 Tests
     // Personal
+
     public void Snippet1Personal() throws IOException {
-        Path fileName = Path.of("snippet1.md");
+        Path fileName = Path.of("Lab4TestFiles/snippet1.md");
         String content = Files.readString(fileName);
         ArrayList<String> toReturn = MarkdownParse.getLinks(content);
 
         ArrayList<String> expected = new ArrayList<>();
 
-        expected.add("example.com");
+        expected.add("`google.com");
 
         assertEquals(expected, toReturn);
     }
 
     public void Snippet2Personal() throws IOException {
-        Path fileName = Path.of("snippet2.md");
+        Path fileName = Path.of("Lab4TestFiles/snippet2.md");
         String content = Files.readString(fileName);
         ArrayList<String> toReturn = MarkdownParse.getLinks(content);
 
         ArrayList<String> expected = new ArrayList<>();
         expected.add("a.com");
-        expected.add("a.com");
+        expected.add("a.com((");
         expected.add("example.com");
 
         assertEquals(expected, toReturn);
     }
 
     public void Snippet3Personal() throws IOException {
-        Path fileName = Path.of("snippet3.md");
+        Path fileName = Path.of("Lab4TestFiles/snippet3.md");
         String content = Files.readString(fileName);
         ArrayList<String> toReturn = MarkdownParse.getLinks(content);
 
@@ -99,34 +100,35 @@ public class MarkdownParseTest {
     }
 
     // Other Repo
+
     public void Snippet1ReviewRepo() throws IOException {
-        Path fileName = Path.of("snippet1.md");
+        Path fileName = Path.of("Lab4TestFiles/snippet1.md");
         String content = Files.readString(fileName);
         ArrayList<String> toReturn = RevMarkdownParse.getLinks(content);
 
         ArrayList<String> expected = new ArrayList<>();
 
-        expected.add("example.com");
+        expected.add("`google.com");
 
         assertEquals(expected, toReturn);
     }
 
     public void Snippet2ReviewRepo() throws IOException {
-        Path fileName = Path.of("snippet2.md");
+        Path fileName = Path.of("Lab4TestFiles/snippet2.md");
         String content = Files.readString(fileName);
         ArrayList<String> toReturn = RevMarkdownParse.getLinks(content);
 
         ArrayList<String> expected = new ArrayList<>();
 
         expected.add("a.com");
-        expected.add("a.com");
+        expected.add("a.com((");
         expected.add("example.com");
 
         assertEquals(expected, toReturn);
     }
 
     public void Snippet3ReviewRepo() throws IOException {
-        Path fileName = Path.of("snippet3.md");
+        Path fileName = Path.of("Lab4TestFiles/snippet3.md");
         String content = Files.readString(fileName);
         ArrayList<String> toReturn = RevMarkdownParse.getLinks(content);
 
