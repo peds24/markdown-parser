@@ -102,7 +102,7 @@ public class MarkdownParseTest {
     public void Snippet1ReviewRepo() throws IOException {
         Path fileName = Path.of("snippet1.md");
         String content = Files.readString(fileName);
-        ArrayList<String> toReturn = ReviewdMarkdownParse.getLinks(content);
+        ArrayList<String> toReturn = RevMarkdownParse.getLinks(content);
 
         ArrayList<String> expected = new ArrayList<>();
 
@@ -114,7 +114,7 @@ public class MarkdownParseTest {
     public void Snippet2ReviewRepo() throws IOException {
         Path fileName = Path.of("snippet2.md");
         String content = Files.readString(fileName);
-        ArrayList<String> toReturn = ReviewdMarkdownParse.getLinks(content);
+        ArrayList<String> toReturn = RevMarkdownParse.getLinks(content);
 
         ArrayList<String> expected = new ArrayList<>();
 
@@ -128,7 +128,7 @@ public class MarkdownParseTest {
     public void Snippet3ReviewRepo() throws IOException {
         Path fileName = Path.of("snippet3.md");
         String content = Files.readString(fileName);
-        ArrayList<String> toReturn = ReviewdMarkdownParse.getLinks(content);
+        ArrayList<String> toReturn = RevMarkdownParse.getLinks(content);
 
         ArrayList<String> expected = new ArrayList<>();
 
