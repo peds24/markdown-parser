@@ -60,5 +60,14 @@ public class MarkdownParseTest {
         assertEquals(expected, toReturn);
     }
     // Lab 4 Tests
+    // Snippet 1
+    // [[another link](`google.com)]
 
+    // Snippet 2
+    // [[nested link](a.com),[a nested parenthesized url](a.com(())), [some escaped
+    // \[ brackets \]](example.com)]
+
+    // Snippet 3
+    // [[this title text is really long and takes up more than
+    // oneline](https://sites.google.com/eng.ucsd.edu/cse-15l-spring-2022/schedule)]
 }
